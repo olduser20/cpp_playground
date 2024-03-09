@@ -3,15 +3,44 @@
 
 #include <iostream>
 #include <string>
+#include <cmath>
+
 using namespace std;
 
-int main()
-{
+void Welcome() {
     cout << "Hello World!\n";
     cout << "Input your name: ";
     string a;
     cin >> a;
-    cout << "Hello World from " << a << "!\n";
+    cout << "Welcome to C++, " << a << "!\n";
+}
+
+
+void QuadraticEquation(double a, double b, double c) {
+    double delta = b * b - 4 * a * c;
+    if (delta < 0) {
+		cout << "No real solution\n";
+	}
+    else if (delta == 0) {
+		cout << "x = " << -b / (2 * a) << "\n";
+	}
+    else {
+		cout << "x1 = " << (-b + sqrt(delta)) / (2 * a) << "\n";
+		cout << "x2 = " << (-b - sqrt(delta)) / (2 * a) << "\n";
+	}
+
+}
+
+
+int main()
+{
+    
+    Welcome();
+
+    // Quadratic equation
+    QuadraticEquation(1, 6, 8);
+
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
