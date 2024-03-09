@@ -4,8 +4,10 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <chrono>
 
 using namespace std;
+using namespace std::chrono;
 
 void Welcome() {
     cout << "Hello World!\n";
@@ -34,13 +36,20 @@ void QuadraticEquation(double a, double b, double c) {
 
 int main()
 {
+    cout << "Hi\n";
+    auto start = high_resolution_clock::now();
     
+
     Welcome();
 
     // Quadratic equation
     QuadraticEquation(1, 6, 8);
 
-
+    auto stop = high_resolution_clock::now();
+    auto duration = duration_cast<milliseconds>(stop - start);
+    cout << "It took "
+		<< duration.count() << " milliseconds" << endl;
+    cout << "Bye\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
