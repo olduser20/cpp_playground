@@ -9,6 +9,25 @@
 using namespace std;
 using namespace std::chrono;
 
+
+class CTVolume {
+    public:
+        CTVolume(string name) {
+			setName(name);
+			cout << "Volume " << name << " is created.\n";
+		}
+        void setName(string name) {
+			this->name = name;
+		}
+        string getName() {
+            return name;
+        }
+    private:
+		string name;
+
+
+};
+
 void Welcome() {
     cout << "Hello World!\n";
     cout << "Input your name: ";
@@ -43,7 +62,10 @@ int main()
     Welcome();
 
     // Quadratic equation
-    QuadraticEquation(1, 6, 8);
+    //QuadraticEquation(1, 6, 8);
+
+    CTVolume vol = CTVolume("Blade");
+
 
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<milliseconds>(stop - start);
