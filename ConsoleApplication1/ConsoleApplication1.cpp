@@ -5,6 +5,7 @@
 #include <string>
 #include <cmath>
 #include <chrono>
+#include <CL/cl.h>
 
 using namespace std;
 using namespace std::chrono;
