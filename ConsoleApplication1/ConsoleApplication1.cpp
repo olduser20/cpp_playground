@@ -8,11 +8,13 @@
 #include <CL/cl.h>
 #include <CL/cl.hpp>
 #include <vector>
+#include <cuda_runtime.h>
 
 using namespace std;
 using namespace std::chrono;
 
 
+// Defining CTVolume class
 class CTVolume {
     public:
         CTVolume(string name) {
